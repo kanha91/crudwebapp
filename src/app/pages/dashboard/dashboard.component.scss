@@ -1,0 +1,39 @@
+.navbar-sidebar-demo {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .title {
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu li {
+    margin: 1rem 0;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .menu li a:hover {
+    text-decoration: underline;
+  }
+  

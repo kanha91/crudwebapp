@@ -1,0 +1,199 @@
+<div class="container">
+    <!-- Sign In Section -->
+    <!-- <p-card header="Sign In" class="mb-3">
+      <form [formGroup]="signinForm" (ngSubmit)="onSignin()">
+        <div class="p-fluid">
+          <div class="field">
+            <p-floatlabel variant="on">
+            <label for="signinEmail">Email</label>
+            <input pInputText id="signinEmail" autocomplete="off" formControlName="email" placeholder="Enter your email" />
+            <small *ngIf="signinForm.get('email')?.invalid && signinForm.get('email')?.touched" class="p-error">
+              Email is required and must be valid.
+            </small>
+        </p-floatlabel>
+          </div>
+  
+          <div class="field">
+            <p-floatlabel variant="on">
+            
+            <p-password id="signinPassword" autocomplete="off" formControlName="password" placeholder="Enter your password" />
+            <label for="signinPassword">Password</label>
+            <small *ngIf="signinForm.get('password')?.invalid && signinForm.get('password')?.touched" class="p-error">
+              Password is required.
+            </small>
+        </p-floatlabel>
+          </div>
+  
+          <p-button label="Sign In" icon="pi pi-sign-in" class="mt-2" type="submit" [disabled]="signinForm.invalid"></p-button>
+        </div>
+      </form>
+    </p-card> -->
+  
+    <!-- Sign Up Section -->
+    <!-- <p-card header="Sign Up">
+      <form [formGroup]="signupForm" (ngSubmit)="onSignup()">
+        <div class="p-fluid">
+          <div class="field">
+            <label for="signupEmail">Email</label>
+            <input pInputText id="signupEmail" formControlName="email" placeholder="Enter your email" />
+            <small *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.touched" class="p-error">
+              Email is required and must be valid.
+            </small>
+          </div>
+  
+          <div class="field">
+            <label for="signupPassword">Password</label>
+            <input pPassword id="signupPassword" formControlName="password" placeholder="Enter your password" />
+            <small *ngIf="signupForm.get('password')?.invalid && signupForm.get('password')?.touched" class="p-error">
+              Password is required (min 6 characters).
+            </small>
+          </div>
+  
+          <div class="field">
+            <label for="confirmPassword">Confirm Password</label>
+            <input pPassword id="confirmPassword" formControlName="confirmPassword" placeholder="Confirm your password" />
+            <small *ngIf="signupForm.hasError('passwordMismatch') && signupForm.get('confirmPassword')?.touched" class="p-error">
+              Passwords do not match.
+            </small>
+          </div>
+  
+          <p-button label="Sign Up" icon="pi pi-user-plus" class="mt-2" type="submit" [disabled]="signupForm.invalid"></p-button>
+        </div>
+      </form>
+    </p-card> -->
+
+     <p-toast></p-toast>
+
+    <div class="card" >
+      <p-tabs value="0" scrollable>
+          <p-tablist>
+              <ng-template #previcon>
+                  <i class="pi pi-minus"></i>
+              </ng-template>
+              <p-tab value="0">
+                <!-- <a href="https://www.flaticon.com/free-icons/my-profile" title="my profile icons">My profile icons created by Nuricon - Flaticon</a> -->
+                  <!-- <p-avatar image="https://i.pinimg.com/736x/21/20/b0/2120b058cb9946e36306778243eadae5.jpg" shape="circle"/> -->
+                  <i class="pi pi-sign-in" style="color: green"></i>
+                  <span class="font-bold whitespace-nowrap">Sign In</span>
+              </p-tab>
+              <p-tab value="1">
+                  <!-- <p-avatar image="https://primefaces.org/cdn/primevue/images/avatar/onyamalimba.png" shape="circle" /> -->
+                  <i class="pi pi-user-plus" style="color: green"></i>
+                  <span class="font-bold whitespace-nowrap">Sign Up</span>
+              </p-tab>
+              <ng-template #nexticon>
+                  <i class="pi pi-plus"></i>
+              </ng-template>
+          </p-tablist>
+          <p-tabpanels>
+              <p-tabpanel value="0">
+                  <p-card header="Sign In" class="mb-3">
+                    <form [formGroup]="signinForm" (ngSubmit)="onSignin()">
+                      <div class="p-fluid">
+                        <div class="field">
+                          <p-floatlabel variant="on">
+                          <label for="signinEmail">Email</label>
+                          <input pInputText id="signinEmail" autocomplete="off" formControlName="email"  />
+                          <small *ngIf="signinForm.get('email')?.invalid && signinForm.get('email')?.touched" class="p-error">
+                            Email is required and must be valid.
+                          </small>
+                      </p-floatlabel>
+                        </div>
+                
+                        <div class="field">
+                          <p-floatlabel variant="on">
+                          
+                          <p-password id="signinPassword" autocomplete="off" formControlName="password"  />
+                          <label for="signinPassword">Password</label>
+                          <small *ngIf="signinForm.get('password')?.invalid && signinForm.get('password')?.touched" class="p-error">
+                            Password is required.
+                          </small>
+                      </p-floatlabel>
+                        </div>
+                
+                        <p-button label="Sign In" icon="pi pi-sign-in" class="mt-2" type="submit" [disabled]="signinForm.invalid"></p-button>
+                      </div>
+                    </form>
+                  </p-card>
+              </p-tabpanel>
+              <p-tabpanel value="1">
+                <p-card header="Sign Up">
+                  <form [formGroup]="signupForm" (ngSubmit)="onSignup()">
+                    <div class="p-fluid">
+
+                      <div class="field">
+                        <p-floatlabel variant="on">
+                          <input pInputText id="name" formControlName="name"  />
+                          <label for="name">Name</label>
+                        </p-floatlabel>
+                        <small *ngIf="signupForm.get('name')?.invalid && signupForm.get('name')?.touched" class="p-error">
+                          Name is required (min 2 characters).
+                        </small>
+                      </div>
+
+                      <div class="field">
+                        <p-floatlabel variant="on">
+                          <input pInputText id="username" formControlName="username" />
+                          <label for="username">Username</label>
+                        </p-floatlabel>
+                        <small *ngIf="signupForm.get('username')?.invalid && signupForm.get('username')?.touched" class="p-error">
+                          Username is required (min 3 characters).
+                        </small>
+                      </div>
+                
+                      <div class="field">
+                        <p-floatlabel variant="on">
+                          <input pInputText id="signupEmail" formControlName="email"  />
+                          <label for="signupEmail">Email</label>
+                        </p-floatlabel>
+                        <small *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.touched" class="p-error">
+                          Email is required and must be valid.
+                        </small>
+                      </div>
+                
+                      <div class="field">
+                        <p-floatlabel variant="on">
+                          <input pInputText id="mobile" formControlName="mobile"  />
+                          <label for="mobile">Mobile</label>
+                        </p-floatlabel>
+                        <small *ngIf="signupForm.get('mobile')?.invalid && signupForm.get('mobile')?.touched" class="p-error">
+                          Mobile number is required and must be 10 digits.
+                        </small>
+                      </div>
+                
+                      <div class="field">
+                        <p-floatlabel variant="on">
+                          <input pPassword id="signupPassword" formControlName="password"  />
+                          <label for="signupPassword">Password</label>
+                        </p-floatlabel>
+                        <small *ngIf="signupForm.get('password')?.invalid && signupForm.get('password')?.touched" class="p-error">
+                          Password is required (min 6 characters).
+                        </small>
+                      </div>
+                
+                      <div class="field">
+                        <p-floatlabel variant="on">
+                          <input pPassword id="confirmPassword" formControlName="confirmPassword"  />
+                          <label for="confirmPassword">Confirm Password</label>
+                        </p-floatlabel>
+                        <small *ngIf="signupForm.hasError('passwordMismatch') && signupForm.get('confirmPassword')?.touched" class="p-error">
+                          Passwords do not match.
+                        </small>
+                      </div>
+                
+                      
+                
+                      <p-button label="Sign Up" icon="pi pi-user-plus" class="mt-2" type="submit" [disabled]="signupForm.invalid"></p-button>
+                    </div>
+                  </form>
+                </p-card>
+                
+                
+              </p-tabpanel>
+              
+          </p-tabpanels>
+      </p-tabs>
+  </div>
+
+  </div>
+  
